@@ -20,6 +20,8 @@ print(calculator(10, 5, '*'))  # 50
 print(calculator(10, 5, '/'))  # 2.0
 print(calculator(10, 0, '/'))  # 0으로 나눌 수 없습니다
 print(calculator(10, 5, '%'))  # 지원하지 않는 연산자입니다
+
+
 # 실습 5-2: 학생 성적 처리
 def print_report(name, scores):
     print(f"==={name} 성적표 ===")
@@ -40,7 +42,10 @@ def print_report(name, scores):
         print(f"등급 : F")
     pass
 
+
 print_report("김철수", [85, 92, 78, 96, 88])
+
+
 # 예상 출력:
 # === 김철수 성적표 ===
 # 점수: [85, 92, 78, 96, 88]
@@ -61,7 +66,8 @@ def validate_password(password):
         return 'False, "대문자를 포함해야 합니다"'
     return 'Ture, "유효한 비밀번호입니다."'
 
-print(validate_password("abc"))        # (False, "8자 이상이어야 합니다")
-print(validate_password("abcdefgh"))   # (False, "숫자를 포함해야 합니다")
-print(validate_password("abcdefg1"))   # (False, "대문자를 포함해야 합니다")
-print(validate_password("Abcdefg1"))   # (True, "유효한 비밀번호입니다")
+
+print(validate_password("abc"))  # (False, "8자 이상이어야 합니다")
+print(validate_password("abcdefgh"))  # (False, "숫자를 포함해야 합니다")
+print(validate_password("abcdefg1"))  # (False, "대문자를 포함해야 합니다")
+print(validate_password("Abcdefg1"))  # (True, "유효한 비밀번호입니다")
