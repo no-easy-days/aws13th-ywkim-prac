@@ -55,12 +55,11 @@ with open('config_updated.json', 'w',encoding='utf-8') as f:
 import csv
 import json
 
-
-def csv_to_dict(csv_file, josn_file):
+def csv_to_dict(csv_file, json_file):
     with open(csv_file, 'r', encoding='utf-8') as f:
         data = list(csv.DictReader(f))
 
-    with open(josn_file, 'w', encoding='utf-8') as f:
+    with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 # 문제 7: 실무 시나리오 - 로그 분석
