@@ -24,9 +24,9 @@ class BankAccount:
         return self
 
     def withdraw(self, amount):
+        if self.balance < amount:
+            raise ValueError("잔액이 부족합니다.")
         self.balance -= amount
-        if self.balance < 0:
-            return print("잔액이 부족합니다")
         return self
 
     def get_balance(self):
@@ -95,6 +95,7 @@ config = DatabaseConfig(
 )
 print(config)
 
+
 # 도전 문제
 class EC2Instance:
     def __init__(self, instance_id, name):
@@ -127,8 +128,4 @@ class EC2Manager:
             instance.stop()
 
     def get_running_count(self):
-        count = 0
-        for instance in self.instances:
-            if instance.status == "running":
-                count += 1
-        return count
+        return sum(1for instance in self.instances if instance.status == "running")

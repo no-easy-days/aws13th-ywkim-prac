@@ -4,7 +4,7 @@ def read_textfile(filename):
         lines = f.readlines()
 
     line_count = len(lines)
-    word_count = sum(len(line.strip()) for line in lines)
+    word_count = sum(len(line.split()) for line in lines)
     char_count = sum(len(line) for line in lines)
     long_line = max(len(line) for line in lines) if lines else 0
 

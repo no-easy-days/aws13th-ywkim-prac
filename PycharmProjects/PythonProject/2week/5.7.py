@@ -7,8 +7,8 @@ def calculator(a, b, operator):
     elif operator == '*':
         return a * b
     elif operator == '/':
-        if b == 0 or a == 0:
-            return print(f"0으로 나눌 수 없습니다.")
+        if b == 0:
+            return "0으로 나눌 수 없습니다."
         return a / b
     else:
         return print(f"지원하지 않는 연산자 입니다.")
@@ -59,12 +59,12 @@ def validate_password(password):
     # 여기에 코드 작성
     # 유효하면 True, 아니면 False와 이유 반환
     if len(password) < 8:
-        return 'False, "8자 이상이어야 합니다"'
+        return False
     if not any(char.isdigit() for char in password):
-        return 'False, "숫자를 포함해야 합니다"'
+        return False
     if password.islower():
-        return 'False, "대문자를 포함해야 합니다"'
-    return 'Ture, "유효한 비밀번호입니다."'
+        return False
+    return True
 
 
 print(validate_password("abc"))  # (False, "8자 이상이어야 합니다")

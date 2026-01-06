@@ -8,7 +8,7 @@ cities = [
 
 # 인구수 오름차순 정렬
 sorted_cities = sorted(cities, key=lambda x: x["population"], reverse=False)
-print([sorted_cities["name"] for sorted_cities in sorted_cities])
+print([a["name"] for a  in sorted_cities])
 
 # 결과: [대구, 인천, 부산, 서울]
 

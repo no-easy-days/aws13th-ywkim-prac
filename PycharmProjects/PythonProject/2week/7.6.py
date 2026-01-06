@@ -25,8 +25,8 @@ students = [
 ]
 
 with open('students.csv', 'w', encoding='utf-8', newline='') as f:
-    feildnames = ['학번', '이름', '학과']
-    writer = csv.DictWriter(f, fieldnames=feildnames)
+    filenames_2 = ['학번', '이름', '학과']
+    writer = csv.DictWriter(f, fieldnames=filenames_2)
 
     writer.writeheader()
     writer.writerows(students)

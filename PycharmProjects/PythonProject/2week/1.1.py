@@ -37,18 +37,17 @@ print(f'이름 : {name} 나이 : {age} 키 : {height}입니다. 내년에는 {ag
 class Calculator:
     def __init__(self):
         pass
-
-    def sum(self, a, b):
-        return print(a + b)
+    def add(self, a, b):
+        return a+b
     def sub(self, a, b):
-        return print(a - b)
+        return a-b
     def mul(self, a, b):
-        return print(a * b)
+        return a*b
     def div(self, a, b):
-        return print(a / b)
+        return a / b
 
 calculator = Calculator()
 a = int(input("숫자를 입력하세요 : "))
 b = int(input("두번째 숫자를 입력하세요 : "))
 
-calculator.sum(a,b)
+print(calculator.add(a,b))

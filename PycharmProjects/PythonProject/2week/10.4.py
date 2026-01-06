@@ -8,7 +8,7 @@ age = input("나이: ")
 sql = "INSERT INTO students VALUES (%s,%s)"
 cursor.execute(sql, (name, age))
 # 이름 기반 %(key)s)
-import cursor
+
 
 name = input("이름: ")
 age = input("나이: ")
