@@ -8,18 +8,28 @@ def calculator(a, b, operator):
         return a * b
     elif operator == '/':
         if b == 0:
-            return "0으로 나눌 수 없습니다."
+            raise ZeroDivisionError("0으로 나눌 수 없습니다.")
         return a / b
     else:
-        return print(f"지원하지 않는 연산자 입니다.")
+        raise ValueError("지원하지 않는 연산자 입니다.")
 
 
-print(calculator(10, 5, '+'))  # 15
-print(calculator(10, 5, '-'))  # 5
-print(calculator(10, 5, '*'))  # 50
-print(calculator(10, 5, '/'))  # 2.0
-print(calculator(10, 0, '/'))  # 0으로 나눌 수 없습니다
-print(calculator(10, 5, '%'))  # 지원하지 않는 연산자입니다
+tests = [
+    (10, 5, '+'),
+    (10, 5, '-'),
+    (10, 5, '*'),
+    (10, 5, '/'),
+    (10, 0, '/'),
+    (10, 5, '%')
+]
+
+for a, b, op in tests:
+    try:
+        print(calculator(a, b, op))
+    except ZeroDivisionError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
 
 
 # 실습 5-2: 학생 성적 처리
